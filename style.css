@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');/* fonte importada do google fonts*/
+
+/* zerando todo o css do projeto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fundo da tela */
+html {
+    width: 100vw;   /* pega toda a largura da tela*/
+    height: 100vh;  /* pega toda a altura da tela*/
+    font-size: 62.5%;   /* coloca em % para usar o rem depois */
+    color: white;   /* cor da fonte */
+    font-family:'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/img5.jpg);    /* adicionando o gradiente e a imagem de fundo */
+    background-position: center center; /* centralizando a imagem*/
+    background-size: cover; /* ajustando a imagem ao tamanho da tela */
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+/* menu - header - navBar*/
+header {
+    width: 100%;    /* pega 100% da largura da tela*/
+    height: 7vh;    /* pega 7vh dos 100vh da altura da tela*/
+    background-color: rgba(22, 22, 22, 0.2);    /* da uma leve escurecida no funda da header */
+}
+
+/* ajustando o menu */
+.menu-content {
+    text-transform: uppercase;  /* deixa tudo em maiúsculo */
+    height: 100%;   /* pega 100% da altura da head*/
+    display: flex;  /* coloca a logo de um lado e o menu do outro*/
+    justify-content: space-around;  /* coloca um espaço entre o menu e a logo e entre eles e as bordas */
+    align-items: center;    /* alinha no centro da altura da header*/
+    font-size: 1.8rem;
+}
+
+/* ajustando a logo */
+.logo {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem; /*espaço entre as letras */
+    cursor: pointer;    /* mãozinha quando passa o mouse em cima */
+}
+
+/* ajuste da lista do menu */
+.menu-content .list-itens {
+    display: flex;  /* coloca os elementos lado a lado */
+    list-style: none;   /* tira as bolinhas da lista */
+    gap: 10px;  /* espaço entre os elementos */
+}
+
+/* ajuste dos links do menu*/
+.menu-content .list-itens a {
+    text-decoration: none;  /* tira o sublinhado*/
+    color: white;
+    padding: 1.5rem;    /*aumenta a area de contato do link */
+    transform: 2ms ease-in; /* para o efeito da barrinha */
+    position: relative; /* para o menu ficar sobre o efeito */
+}
+
+/* before para o efeito da barrinha */
+.menu-content .list-itens a:before {
+    content: ' ';   /*para utilizar o befor, tem que ter um content, pode ser vazio*/
+    position: absolute; /* para o efeito ficar por baixo do link */
+    bottom: 0px;    /* para o efeito começar de baixo */
+    left: 0px;  /* para começar tambem do lado esquerdo */
+    width: 0px; /* para começar com 0px de tamanho */
+    height: 1px;    /* para abarrinha ter só 1px de largura */
+    background-color: rgba(251, 255, 0);    /* cor da barrinha */
+    transition: all 1s ease;  /* transição da barrinha */
+}
+
+/* ativação do efeito */
+.menu-content .list-itens a:hover:before {
+    width: 100%;    /* faz o efeito ficar com 100% da largura do link quando passa o mouse por cima */
+}
+
+/* ajuste da caixa do conteudo principal */
+main {
+    height: 93vh;   /* tirando os 7vh da header, usa os 93vh que sobrou*/
+    display: flex;
+    justify-content: center;    /* centraliza na horizontal*/
+    align-items: center;    /* centraliza na vertical */
+}
+
+/* ajuste da div do conteudo principal */
+.main-content {
+    display: flex;
+    flex-direction: column; /* alinha em colunas */
+    justify-content: center;    /* centraliza na horizontal */
+    align-items: center;    /* centraliza o texto */
+}
+
+/* ajuste dos textos principais */
+.primary-text {
+    width: 850px;   /*tamanho da caixa do h1 */
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;     /*centralizando na horizontal*/
+}
+
+.second-text {
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgba(165, 165, 165);
+    text-transform: uppercase;  /* deixa maiuscula*/
+}
+
+/* div dos botões */
+.btns {
+    display: flex;  /* lado a lado */
+    justify-content: center;    /*centraliza na horizontal */
+    gap: 20px;  /* espaço entre os botões */
+}
+
+/* ajuste dos botões */
+.btns button {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;  /*deixa em negrito */
+    letter-spacing: 0.2rem;   /*espaço entre letras*/
+    border-radius: 20px;
+    position: relative; /* ficar por cima */
+    transition: 1s;   /* transição cor letra */
+}
+
+.btns button:hover {
+    color: rgba(251, 255, 0);
+    border: none;
+}
+
+.btns button:before {
+     content: ' ';
+     bottom: 0;
+     left: 0;
+     position: absolute;
+     width: 0;
+     height: 60px;
+     background-color: rgba(61, 61, 61);
+     z-index: -1;   /* efeito fica embaixo do botão */
+     transition: 1s; /*transição do efeito */
+}
+
+.btns button:hover:before {
+     width: 100%;
+     border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
